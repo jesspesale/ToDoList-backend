@@ -12,7 +12,11 @@ class TodosController < ApplicationController
     end
 
     def update
-
+        if @todo.update(todo_params)
+            render json: @todo
+        else
+            render json: @todo.erros, status: :unprocessable_entity
+        end
     end
 
     def destroy

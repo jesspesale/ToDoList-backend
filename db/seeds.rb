@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-laundry = Todo.create(title: "Do the laudry", completed: false)
+Todo.create(title: "Do the laudry", completed: false)
 
-dog = Todo.create(title: "Walk the dog", completed: false)
+Todo.create(title: "Walk the dog", completed: false)
 
 
+# rake db:reset -> resets everything and reseeds db
