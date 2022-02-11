@@ -3,11 +3,12 @@ class TodosController < ApplicationController
     before_action :set_todo, only: [:show, :update, :destroy]
 
     def index
-
+        @todos = Todo.all
+        render json: @todos
     end
 
     def show
-
+        render json: @todo
     end
 
     def update
