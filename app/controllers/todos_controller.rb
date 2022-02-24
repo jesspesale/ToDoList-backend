@@ -25,7 +25,8 @@ class TodosController < ApplicationController
 
 
     def create
-        @todo = Todo.new(todo_params)
+        # byebug
+        @todo = Todo.new(params[:todo])
         if @todo.save
             render json: @todo
         else
