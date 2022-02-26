@@ -22,9 +22,10 @@ class TodosController < ApplicationController
         render json: @todo
     end
     
-        def destroy
-            @todo.destroy
-        end
+    def destroy
+        # byebug
+        @todo.destroy
+    end
 
     def update
         if @todo.update(todo_params)
